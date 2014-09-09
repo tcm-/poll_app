@@ -1,3 +1,7 @@
 * Databases *
 #############
 *.sqlite3
+
+* Compiled files *
+##################
+*.pyc
