@@ -16,9 +16,9 @@ class QuestionAdmin(admin.ModelAdmin):
 	list_display = ('question_text', 'pub_date', 'was_published_recently')
 	def was_published_recently(self):
 		return self.pub_date >= timezone.new() - datetime.timedelta(days=1)
-		was_published_recently.admin_order_field = 'pub_date'
-		was_published_recently.boolean = True
-		was_published_recently.short_description = 'Published recently?'
+	was_published_recently.admin_order_field = 'pub_date'
+	was_published_recently.boolean = True
+	was_published_recently.short_description = 'Published recently?'
 	list_filter = ['pub_date']
 	search_fields = ['question_date']
 
